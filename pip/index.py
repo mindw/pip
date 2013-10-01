@@ -510,12 +510,6 @@ class PackageFinder(object):
 
         selected_version = applicable_versions[0].location
 
-        if (selected_version.verifiable is not None
-                and not selected_version.verifiable):
-            logger.warning(
-                "%s is potentially insecure and unverifiable.", req.name,
-            )
-
         if selected_version._deprecated_regex:
             warnings.warn(
                 "%s discovered using a deprecated method of parsing, in the "
