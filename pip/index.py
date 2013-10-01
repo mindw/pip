@@ -331,15 +331,18 @@ class PackageFinder(object):
 
         selected_version = applicable_versions[0][1]
 
-        if (selected_version.internal is not None
-                and not selected_version.internal):
-            logger.warn("%s an externally hosted file and may be "
-                        "unreliable" % req.name)
+        # TODO: Remove after 1.4 has been released
+        # if (selected_version.internal is not None
+                # and not selected_version.internal):
+            # logger.warn("You are installing an externally hosted file. Future "
+                        # "versions of pip will default to disallowing "
+                        # "externally hosted files.")
 
-        if (selected_version.verifiable is not None
-                and not selected_version.verifiable):
-            logger.warn("%s is potentially insecure and "
-                        "unverifiable." % req.name)
+        # if (selected_version.verifiable is not None
+                # and not selected_version.verifiable):
+            # logger.warn("You are installing a potentially insecure and "
+                        # "unverifiable file. Future versions of pip will "
+                        # "default to disallowing insecure files.")
 
         if selected_version._deprecated_regex:
             logger.deprecated(
