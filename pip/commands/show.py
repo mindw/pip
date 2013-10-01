@@ -29,6 +29,20 @@ class ShowCommand(Command):
             default=False,
             help='Show the full list of installed files for each package.')
 
+        self.cmd_opts.add_option(
+            '--index',
+            dest='index',
+            metavar='URL',
+            default='https://pypi.python.org/pypi',
+            help='Base URL of Python Package Index (default %default)')
+
+        self.cmd_opts.add_option(
+            '-p', '--pypi',
+            dest='pypi',
+            action='store_true',
+            default=False,
+            help='Show PyPi version')
+
         self.parser.insert_option_group(0, self.cmd_opts)
 
     def run(self, options, args):
@@ -37,14 +51,30 @@ class ShowCommand(Command):
             return ERROR
         query = args
 
-        results = search_packages_info(query)
+        if options.pypi:
+            with self._build_session(options) as session:
+                results = search_packages_info(query, options.index, session)
+        else:
+            results = search_packages_info(query, options.index)
         if not print_results(
                 results, list_files=options.files, verbose=options.verbose):
             return ERROR
+
         return SUCCESS
 
 
-def search_packages_info(query):
+def _format_package(requirement):
+    r = requirement
+    installed_ver = '-'
+    try:
+        d = pkg_resources.get_distribution(r.project_name)
+        installed_ver = str(d.version)
+    except pkg_resources.DistributionNotFound:
+        pass
+    return "%s [%s]" % (r, installed_ver)
+
+
+def search_packages_info(query, index_url=None, session=None):
     """
     Gather details from installed distributions. Print distribution name,
     version, location, and installed files. Installed files requires a
@@ -57,12 +87,46 @@ def search_packages_info(query):
 
     query_names = [canonicalize_name(name) for name in query]
 
-    for dist in [installed[pkg] for pkg in query_names if pkg in installed]:
+    distributions = [installed[pkg] for pkg in query_names if pkg in installed]
+    for dist in distributions:
+        required_by = []
+        for _, p in installed.items():
+            r = next((r for r in p.requires() if r.key == dist.key), None)
+            if r:
+                required_by.append("%s %s" % (p.project_name, r.specifier))
+            else:
+                for e in p.extras:
+                    r = next(
+                        (r for r in p.requires([e]) if r.key == dist.key), None
+                    )
+                    if r:
+                        required_by.append(
+                            "%s[%s] %s" % (p.project_name, e, r.specifier))
+        extras = {}
+        for e in dist.extras:
+            reqs = set(dist.requires([e])) - set(dist.requires())
+            extras[e] = map(_format_package, reqs)
+
+        if session:
+            from pip.download import PipXmlrpcTransport
+            from pip._vendor.six.moves import xmlrpc_client
+
+            transport = PipXmlrpcTransport(index_url, session)
+            pypi = xmlrpc_client.ServerProxy(index_url, transport)
+            pypi_releases = pypi.package_releases(dist.project_name)
+            pypi_version = pypi_releases[0] if pypi_releases else 'UNKNOWN'
+        else:
+            pypi_version = None
+
+        requires = [_format_package(r_) for r_ in dist.requires()]
         package = {
             'name': dist.project_name,
             'version': dist.version,
+            'pypi_version': pypi_version,
             'location': dist.location,
-            'requires': [dep.project_name for dep in dist.requires()],
+            'requires': requires,
+            'required_by': required_by,
+            'extras': extras
         }
         file_list = None
         metadata = None
@@ -128,23 +192,36 @@ def print_results(distributions, list_files=False, verbose=False):
             logger.info("---")
         logger.info("Name: %s", dist.get('name', ''))
         logger.info("Version: %s", dist.get('version', ''))
+        if dist['pypi_version']:
+            logger.info("PyPi Version: %s", dist['pypi_version'])
         logger.info("Summary: %s", dist.get('summary', ''))
         logger.info("Home-page: %s", dist.get('home-page', ''))
         logger.info("Author: %s", dist.get('author', ''))
         logger.info("Author-email: %s", dist.get('author-email', ''))
         logger.info("License: %s", dist.get('license', ''))
         logger.info("Location: %s", dist.get('location', ''))
-        logger.info("Requires: %s", ', '.join(dist.get('requires', [])))
+        logger.info("Metadata-Version: %s",
+                    dist.get('metadata-version', ''))
+        logger.info("Installer: %s", dist.get('installer', ''))
         if verbose:
-            logger.info("Metadata-Version: %s",
-                        dist.get('metadata-version', ''))
-            logger.info("Installer: %s", dist.get('installer', ''))
             logger.info("Classifiers:")
             for classifier in dist.get('classifiers', []):
                 logger.info("  %s", classifier)
-            logger.info("Entry-points:")
-            for entry in dist.get('entry_points', []):
-                logger.info("  %s", entry.strip())
+        logger.info("Requires:")
+        for line in sorted(dist.get('requires', [])):
+                logger.info("  %s", line)
+        for extra_name, deps in dist['extras'].items():
+            logger.info("Extra Require [%s]:", extra_name)
+            for line in sorted(deps):
+                logger.info("  %s", line.strip())
+        logger.info("Required by(%d):", len(dist['required_by']))
+        for line in sorted(dist['required_by']):
+            logger.info("  %s", line.strip())
+
+        logger.info("Entry-points:")
+        for entry in dist.get('entry_points', []):
+            logger.info("  %s", entry.strip())
+            
         if list_files:
             logger.info("Files:")
             for line in dist.get('files', []):
