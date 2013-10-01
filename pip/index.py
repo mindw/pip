@@ -591,12 +591,6 @@ class PackageFinder(object):
 
         selected_version = applicable_versions[0].location
 
-        if (selected_version.verifiable is not None and not
-                selected_version.verifiable):
-            logger.warning(
-                "%s is potentially insecure and unverifiable.", req.name,
-            )
-
         return selected_version
 
     def _find_url_name(self, index_url, url_name):
