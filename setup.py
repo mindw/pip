@@ -74,6 +74,12 @@ setup(name="pip",
       entry_points=dict(console_scripts=['pip=pip:main', 'pip%s=pip:main' % sys.version[:1],
           'pip%s=pip:main' % sys.version[:3]]),
       tests_require=tests_require,
+      install_requires = [
+            'html5lib>=0.99',
+            'six>=1.3.0',
+            'colorama>=0.2.7',
+            'requests>=2.0.1',
+        ],
       zip_safe=False,
       extras_require={
           'testing': tests_require,

@@ -8,6 +8,7 @@ import shutil
 import tempfile
 import textwrap
 import zipfile
+import six
 
 from distutils.util import change_root
 from pip.locations import (bin_py, running_under_virtualenv,PIP_DELETE_MARKER_FILENAME,
@@ -33,7 +34,7 @@ from pip.download import (PipSession, get_file_content, is_url, url_to_path,
                           unpack_file_url, unpack_http_url)
 import pip.wheel
 from pip.wheel import move_wheel_files, Wheel, wheel_ext
-from pip._vendor import pkg_resources, six
+from pip._vendor import pkg_resources
 
 
 def read_text_file(filename):
