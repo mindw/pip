@@ -162,7 +162,9 @@ The ``pip install`` command also supports a
 :ref:`--allow-unverified PROJECT <--allow-unverified>` option that will enable
 installing insecurely linked files. These are either directly linked (as above)
 files without a hash, or files that are linked from either the home page or the
-download url of a package.
+download url of a package. Unverified files for all projects may be enabled using the
+:ref:`--allow-all-unverified <--allow-all-unverified>` flag to the ``pip install``
+command.
 
 These options can be used in a requirements file.  Assuming some fictional
 `ExternalPackage` that is hosted external and unverified, then your requirements
