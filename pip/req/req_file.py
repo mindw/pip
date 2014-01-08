@@ -37,6 +37,7 @@ SUPPORTED_OPTIONS = [
     cmdoptions.no_allow_external,
     cmdoptions.allow_unsafe,
     cmdoptions.no_allow_unsafe,
+    cmdoptions.allow_all_unsafe,
     cmdoptions.use_wheel,
     cmdoptions.no_use_wheel,
     cmdoptions.always_unzip,
@@ -192,6 +193,8 @@ def process_line(line, filename, line_number, finder=None, comes_from=None,
             # Remove after 7.0
             finder.allow_unverified |= set(
                 [normalize_name(v).lower() for v in opts.allow_unverified])
+        if opts.allow_all_unverified:
+            finder.allow_all_unverified = True
         if opts.find_links:
             # FIXME: it would be nice to keep track of the source
             # of the find_links: support a find-links local path

@@ -316,6 +316,15 @@ def allow_unsafe():
         "in an insecure and unverifiable way",
     )
 
+allow_all_unsafe = partial(
+    Option,
+    "--allow-all-unverified",
+    dest="allow_all_unverified",
+    action="store_true",
+    default=False,
+    help="Allow the installation of all insecure and unverifiable files",
+)
+
 # Remove after 7.0
 no_allow_unsafe = partial(
     Option,
@@ -575,6 +584,7 @@ index_group = {
         allow_all_external,
         no_allow_external,
         allow_unsafe,
+        allow_all_unsafe,
         no_allow_unsafe,
         process_dependency_links,
     ]
