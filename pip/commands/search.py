@@ -14,7 +14,6 @@ from pip.status_codes import NO_MATCHES_FOUND
 from pip._vendor import pkg_resources
 from pip._vendor.six.moves import xmlrpc_client
 
-
 logger = logging.getLogger(__name__)
 
 
@@ -126,15 +125,14 @@ def print_results(hits, name_column_width=None, terminal_width=None):
                               '%s (%s)' % (name, version), summary)
         try:
             logger.info(line)
+            with indent_log():
+                latest = highest_version(hit['versions'])
+                logger.info('LATEST:    %s', latest)
+
             if name in installed_packages:
                 dist = pkg_resources.get_distribution(name)
                 with indent_log():
-                    latest = highest_version(hit['versions'])
-                    if dist.version == latest:
-                        logger.info('INSTALLED: %s (latest)', dist.version)
-                    else:
-                        logger.info('INSTALLED: %s', dist.version)
-                        logger.info('LATEST:    %s', latest)
+                    logger.info('INSTALLED: %s' % dist.version)
         except UnicodeEncodeError:
             pass
 
