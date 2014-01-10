@@ -97,16 +97,18 @@ def print_results(hits, name_column_width=25, terminal_width=None):
         line = '%s - %s' % (name.ljust(name_column_width), summary)
         try:
             logger.notify(line)
+            logger.indent += 2
+            latest = highest_version(hit['versions'])
+            try:
+                logger.notify('LATEST:    %s' % latest)
+            finally:
+                logger.indent -= 2
+                    
             if name in installed_packages:
                 dist = pkg_resources.get_distribution(name)
                 logger.indent += 2
                 try:
-                    latest = highest_version(hit['versions'])
-                    if dist.version == latest:
-                        logger.notify('INSTALLED: %s (latest)' % dist.version)
-                    else:
-                        logger.notify('INSTALLED: %s' % dist.version)
-                        logger.notify('LATEST:    %s' % latest)
+                    logger.notify('INSTALLED: %s' % dist.version)
                 finally:
                     logger.indent -= 2
         except UnicodeEncodeError:
