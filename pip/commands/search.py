@@ -28,6 +28,12 @@ class SearchCommand(Command):
             metavar='URL',
             default='https://pypi.python.org/pypi',
             help='Base URL of Python Package Index (default %default)')
+        self.cmd_opts.add_option(
+            '--no-summary',
+            dest='summary',
+            action='store_false',
+            default=True,
+            help="Don't search summary")
 
         self.parser.insert_option_group(0, self.cmd_opts)
 
@@ -37,7 +43,7 @@ class SearchCommand(Command):
         query = args
         index_url = options.index
 
-        pypi_hits = self.search(query, index_url)
+        pypi_hits = self.search(query, index_url, options.summary)
         hits = transform_hits(pypi_hits)
 
         terminal_width = None
@@ -49,9 +55,12 @@ class SearchCommand(Command):
             return SUCCESS
         return NO_MATCHES_FOUND
 
-    def search(self, query, index_url):
+    def search(self, query, index_url, search_summery):
         pypi = xmlrpclib.ServerProxy(index_url)
-        hits = pypi.search({'name': query, 'summary': query}, 'or')
+        args = {'name': query}
+        if search_summery:
+            args['summary'] = query
+        hits = pypi.search(args, 'or')
         return hits
 
 
