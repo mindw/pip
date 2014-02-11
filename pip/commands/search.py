@@ -33,6 +33,12 @@ class SearchCommand(Command):
             metavar='URL',
             default=PyPI.pypi_url,
             help='Base URL of Python Package Index (default %default)')
+        self.cmd_opts.add_option(
+            '--no-summary',
+            dest='summary',
+            action='store_false',
+            default=True,
+            help="Don't search summary")
 
         self.parser.insert_option_group(0, self.cmd_opts)
 
@@ -57,7 +63,10 @@ class SearchCommand(Command):
         with self._build_session(options) as session:
             transport = PipXmlrpcTransport(index_url, session)
             pypi = xmlrpc_client.ServerProxy(index_url, transport)
-            hits = pypi.search({'name': query, 'summary': query}, 'or')
+            args = {'name': query}
+            if options.summery:
+                args['summary'] = query
+            hits = pypi.search(args, 'or')
             return hits
 
 
@@ -118,8 +127,8 @@ def print_results(hits, name_column_width=25, terminal_width=None):
             logger.info(line)
             with indent_log():
                 latest = highest_version(hit['versions'])
-	            logger.info('INSTALLED: %s (latest)', dist.version)
-			
+                logger.info('INSTALLED: %s (latest)', dist.version)
+
             if name in installed_packages:
                 dist = pkg_resources.get_distribution(name)
                 with indent_log():
