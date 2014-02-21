@@ -714,6 +714,11 @@ class HTMLPage(object):
                 level=2,
                 meth=logger.notify,
             )
+        except requests.TooManyRedirects as exc:
+            cls._handle_fail(
+                req, link, "Error: %s" % exc, url,
+                cache=cache,
+            )
         else:
             if cache is not None:
                 cache.add_page([url, resp.url], inst)
