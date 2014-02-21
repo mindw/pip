@@ -784,6 +784,20 @@ class HTMLPage(object):
             cls._handle_fail(link, "connection error: %s" % exc, url)
         except requests.Timeout:
             cls._handle_fail(link, "timed out", url)
+        except requests.TooManyRedirects as exc:
+            cls._handle_fail(
+                link,
+                "Error: %s" % exc,
+                url
+            )
+        except Exception as e:
+            reason = ("There was an unknown error: %s" % e)
+            cls._handle_fail(
+                link,
+                reason,
+                url
+            )
+
         else:
             return inst
 
