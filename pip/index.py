@@ -9,6 +9,7 @@ import re
 import mimetypes
 import posixpath
 import warnings
+import socket
 
 from pip._vendor.six.moves.urllib import parse as urllib_parse
 from pip._vendor.six.moves.urllib import request as urllib_request
@@ -900,6 +901,10 @@ class HTMLPage(object):
             )
         except requests.Timeout:
             cls._handle_fail(req, link, "timed out", url)
+
+        except socket.timeout:
+            cls._handle_fail(req, link, "timed out", url)
+
         except SSLError as exc:
             reason = ("There was a problem confirming the ssl certificate: "
                       "%s" % exc)
@@ -908,6 +913,24 @@ class HTMLPage(object):
                 level=2,
                 meth=logger.info,
             )
+        except requests.TooManyRedirects as exc:
+            cls._handle_fail(
+                req,
+                link,
+                "Error: %s" % exc,
+                url
+            )
+        except Exception as e:
+            reason = ("There was an unknown error: %s" % e)
+            cls._handle_fail(
+                req,
+                link,
+                reason,
+                url,
+                level=2,
+                meth=logger.info
+            )
+
         else:
             return inst
 
