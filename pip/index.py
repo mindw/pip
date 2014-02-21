@@ -959,6 +959,21 @@ class HTMLPage(object):
             reason = ("There was a problem confirming the ssl certificate: "
                       "%s" % exc)
             cls._handle_fail(link, reason, url, level=2, meth=logger.info)
+        except requests.TooManyRedirects as exc:
+            cls._handle_fail(
+                link,
+                "Error: %s" % exc,
+                url
+            )
+        except Exception as e:
+            reason = ("There was an unknown error: %s" % e)
+            cls._handle_fail(
+                link,
+                reason,
+                url,
+                level=2
+            )
+
         else:
             return inst
 
