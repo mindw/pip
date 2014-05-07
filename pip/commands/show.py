@@ -92,7 +92,7 @@ class ShowCommand(Command):
                 make_ext = lambda pkg_name: (pkg_name, True if pkg_name in installed_packages else False)
                 for e in dist.extras:
                     extras[e] = [make_ext(dep.project_name.lower()) for dep in dist.requires([e]) if dep.project_name not in requires]
-                
+
                 pypi = xmlrpclib.ServerProxy(index_url)
                 pypi_releases = pypi.package_releases(dist.project_name)
                 pypi_version = pypi_releases[0] if pypi_releases else 'UNKNOWN'
@@ -105,7 +105,8 @@ class ShowCommand(Command):
                     'requires': requires,
                     'required_by': required_by,
                     'extras': extras,
-                    'metadata' : PkgInfoParsed(dist)
+                    'metadata' : PkgInfoParsed(dist),
+                    'exports' : pkg_resources.get_entry_map(dist)
                 }
                 filelist = os.path.join(
                            dist.location,
@@ -133,6 +134,9 @@ class ShowCommand(Command):
                 deps = ["%s%s" % (dep[0], "" if dep[1] else "(-)") for dep in deps]
                 logger.notify("Extra Require [%s]: %s", extra_name, ', '.join(deps))
             logger.notify("Required by(%d): %s" % (len(dist['required_by']), ', '.join(dist['required_by'])))
+            for group, value in dist['exports'].items():
+                logger.notify("Exports [%s]: %s" % (group, ', '.join(value.keys())))
+
             if list_all_files:
                 logger.notify("Files:")
                 if 'files' in dist:
