@@ -10,7 +10,7 @@ from pip.utils import (
     get_installed_distributions, dist_is_editable)
 from pip.utils.deprecation import RemovedInPip10Warning
 from pip.cmdoptions import make_option_group, index_group
-
+from pip._vendor import pkg_resources
 
 logger = logging.getLogger(__name__)
 
@@ -125,6 +125,14 @@ class ListCommand(Command):
         for dist, latest_version, typ in sorted(
                 self.find_packages_latest_versions(options),
                 key=lambda p: p[0].project_name.lower()):
+            # We turn the version object into a str here because otherwise
+            # when we're debundled but setuptools isn't, Python will see
+            # packaging.version.Version and
+            # pkg_resources._vendor.packaging.version.Version as different
+            # types. This way we'll use a str as a common data interchange
+            # format. If we stop using the pkg_resources provided specifier
+            # and start using our own, we can drop the cast to str().
+            latest_version = pkg_resources.parse_version(str(latest_version))
             if latest_version > dist.parsed_version:
                 logger.info(
                     '%s - Latest: %s [%s]',
