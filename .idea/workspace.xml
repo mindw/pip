@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6792d2f-d8d0-4184-9ce1-473e02fd0b17" name="Default" comment="" />
+    <list default="true" id="e6792d2f-d8d0-4184-9ce1-473e02fd0b17" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pip/index.py" afterPath="$PROJECT_DIR$/pip/index.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pip-git.iml" afterPath="$PROJECT_DIR$/.idea/pip-git.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pip/util.py" afterPath="$PROJECT_DIR$/pip/util.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="pip-git.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,10 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="install.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="install.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="49" selection-start="914" selection-end="914" vertical-scroll-proportion="0.30478087" vertical-offset="0" max-vertical-offset="5270">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3875" max-vertical-offset="5270">
+              <caret line="240" column="40" selection-start-line="240" selection-start-column="26" selection-end-line="240" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -35,7 +43,58 @@
       <file leaf-file-name="index.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pip/index.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="679" column="54" selection-start="29454" selection-end="29454" vertical-scroll-proportion="0.0" vertical-offset="11543" max-vertical-offset="17187">
+            <state vertical-scroll-proportion="0.0" vertical-offset="6525" max-vertical-offset="17272">
+              <caret line="404" column="57" selection-start-line="404" selection-start-column="43" selection-end-line="404" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pip/_vendor/_markerlib/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="markers.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pip/_vendor/_markerlib/markers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="511" max-vertical-offset="2125">
+              <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.rst" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pip/_vendor/README.rst">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="socket.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/socket.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="9843">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="download.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pip/download.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3414" max-vertical-offset="11067">
+              <caret line="237" column="47" selection-start-line="237" selection-start-column="47" selection-end-line="237" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -44,10 +103,9 @@
       <file leaf-file-name="show.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="65" selection-start="4436" selection-end="4436" vertical-scroll-proportion="0.0" vertical-offset="1545" max-vertical-offset="2584">
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="2584">
+              <caret line="96" column="53" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="53" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,35 +113,43 @@
       <file leaf-file-name="list.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pip/commands/list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="73" selection-start="4804" selection-end="4804" vertical-scroll-proportion="0.0" vertical-offset="1615" max-vertical-offset="2873">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="2873">
+              <caret line="60" column="28" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pip/commands/search.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="25" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="2533">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="git.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pip/vcs/git.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="150" column="36" selection-start="6130" selection-end="6138" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="3400">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="util.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="util.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pip/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="704" column="0" selection-start="23616" selection-end="23616" vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12342">
+            <state vertical-scroll-proportion="0.5737977" vertical-offset="4669" max-vertical-offset="12393">
+              <caret line="295" column="49" selection-start-line="295" selection-start-column="49" selection-end-line="295" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shutil.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/shutil.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4614" max-vertical-offset="9452">
+              <caret line="263" column="4" selection-start-line="263" selection-start-column="4" selection-end-line="263" selection-end-column="4" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="req.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pip/req.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.5" vertical-offset="30843" max-vertical-offset="32980">
+              <caret line="1819" column="31" selection-start-line="1819" selection-start-column="31" selection-end-line="1819" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,6 +168,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/pip/commands/show.py" />
+        <option value="$PROJECT_DIR$/pip/commands/install.py" />
+        <option value="C:/Python27/Lib/socket.py" />
+        <option value="$PROJECT_DIR$/pip/index.py" />
+        <option value="$PROJECT_DIR$/pip/req.py" />
+        <option value="$PROJECT_DIR$/pip/util.py" />
       </list>
     </option>
   </component>
@@ -125,7 +196,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -137,6 +208,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -144,6 +216,14 @@
               <option name="myItemId" value="pip-git" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 2.7.6 (C:/Python27/python.exe) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -166,24 +246,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pip-git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pip-git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -205,18 +267,85 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pip-git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pip-git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pip-git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pip-git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_markerlib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pip-git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pip-git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pip-git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pip-git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contrib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../SQLAlchemy/__workspace__/sqlalchemy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../patsy/__workspace/patsy-git" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -309,6 +438,9 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -330,9 +462,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -378,6 +507,9 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" myUseAcceleration="nothing">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e6792d2f-d8d0-4184-9ce1-473e02fd0b17" name="Default" comment="" />
@@ -408,25 +540,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291866" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291866" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28624734" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2860192" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22547974" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22518677" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3323442" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3240918" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3236994" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -435,6 +567,9 @@
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
   </component>
@@ -450,380 +585,423 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pip/vcs/git.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="3400">
+          <caret line="150" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pip/util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="704" column="0" selection-start="23616" selection-end="23616" vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12342">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12342">
+          <caret line="704" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="50" selection-start="6635" selection-end="6656" vertical-scroll-proportion="0.0" vertical-offset="3094" max-vertical-offset="5508">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3094" max-vertical-offset="5508">
+          <caret line="182" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pip/index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="302" column="24" selection-start="13277" selection-end="13277" vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17187">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17187">
+          <caret line="302" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="65" selection-start="4436" selection-end="4436" vertical-scroll-proportion="0.0" vertical-offset="1716" max-vertical-offset="2584">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="2516">
+          <caret line="82" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pip/commands/search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="25" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="2533">
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2533">
+          <caret line="32" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12342">
+          <caret line="704" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3094" max-vertical-offset="5508">
+          <caret line="182" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17187">
+          <caret line="302" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="2516">
+          <caret line="82" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/commands/search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="2533">
+          <caret line="32" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12342">
+          <caret line="704" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3094" max-vertical-offset="5389">
+          <caret line="182" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17102">
+          <caret line="302" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="2516">
+          <caret line="82" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/commands/search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="2533">
+          <caret line="32" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12342">
+          <caret line="704" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3094" max-vertical-offset="5389">
+          <caret line="182" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17102">
+          <caret line="302" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="2516">
+          <caret line="74" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12342">
+          <caret line="704" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2770" max-vertical-offset="5321">
+          <caret line="182" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17170">
+          <caret line="302" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1258" max-vertical-offset="2499">
+          <caret line="74" column="65" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12325">
+          <caret line="704" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2770" max-vertical-offset="5321">
+          <caret line="182" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17170">
+          <caret line="302" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1258" max-vertical-offset="2499">
+          <caret line="74" column="65" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12325">
+          <caret line="704" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2770" max-vertical-offset="5321">
+          <caret line="182" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17170">
+          <caret line="302" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="2499">
+          <caret line="95" column="53" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12325">
+          <caret line="704" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pip/vcs/git.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="36" selection-start="6130" selection-end="6138" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="3400">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="3400">
+          <caret line="150" column="36" selection-start-line="150" selection-start-column="36" selection-end-line="150" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pip/util.py">
+    <entry file="file://$USER_HOME$/.PyCharm20/system/python_stubs/-762174762/skimage/measure/_find_contours_cy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="704" column="0" selection-start="23616" selection-end="23616" vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12342">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="787">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
+    <entry file="file://$PROJECT_DIR$/tox.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="50" selection-start="6635" selection-end="6656" vertical-scroll-proportion="0.0" vertical-offset="3094" max-vertical-offset="5508">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="302" column="24" selection-start="13277" selection-end="13277" vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17187">
-          <folding />
+        <state vertical-scroll-proportion="0.3888183" vertical-offset="0" max-vertical-offset="787">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="22" selection-start="2902" selection-end="2902" vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="2516">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="25" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2533">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/vcs/git.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="36" selection-start="6130" selection-end="6138" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="3400">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="704" column="0" selection-start="23616" selection-end="23616" vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12342">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="50" selection-start="6635" selection-end="6656" vertical-scroll-proportion="0.0" vertical-offset="3094" max-vertical-offset="5508">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="302" column="24" selection-start="13277" selection-end="13277" vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17187">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="22" selection-start="2902" selection-end="2902" vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="2516">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="25" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2533">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="704" column="0" selection-start="23616" selection-end="23616" vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12342">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="50" selection-start="6635" selection-end="6656" vertical-scroll-proportion="0.0" vertical-offset="3094" max-vertical-offset="5508">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="302" column="24" selection-start="13277" selection-end="13277" vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17187">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="22" selection-start="2902" selection-end="2902" vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="2516">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="25" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="2533">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="704" column="0" selection-start="23616" selection-end="23616" vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12342">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="50" selection-start="6635" selection-end="6656" vertical-scroll-proportion="0.0" vertical-offset="3094" max-vertical-offset="5389">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="302" column="24" selection-start="13277" selection-end="13277" vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="22" selection-start="2902" selection-end="2902" vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="2516">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="25" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="2533">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="704" column="0" selection-start="23616" selection-end="23616" vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12342">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="50" selection-start="6635" selection-end="6656" vertical-scroll-proportion="0.0" vertical-offset="3094" max-vertical-offset="5389">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="302" column="24" selection-start="13277" selection-end="13277" vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="34" selection-start="2584" selection-end="2584" vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="2516">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="704" column="0" selection-start="23616" selection-end="23616" vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12342">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="50" selection-start="6635" selection-end="6656" vertical-scroll-proportion="0.0" vertical-offset="2770" max-vertical-offset="5321">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="302" column="24" selection-start="13044" selection-end="13044" vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="65" selection-start="2632" selection-end="2632" vertical-scroll-proportion="0.0" vertical-offset="1258" max-vertical-offset="2499">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="704" column="4" selection-start="23603" selection-end="23603" vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12325">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="50" selection-start="6635" selection-end="6656" vertical-scroll-proportion="0.0" vertical-offset="2770" max-vertical-offset="5321">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="302" column="24" selection-start="13044" selection-end="13044" vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="65" selection-start="2632" selection-end="2632" vertical-scroll-proportion="0.0" vertical-offset="1258" max-vertical-offset="2499">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="704" column="4" selection-start="23603" selection-end="23603" vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12325">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="50" selection-start="6635" selection-end="6656" vertical-scroll-proportion="0.0" vertical-offset="2770" max-vertical-offset="5321">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="302" column="24" selection-start="13044" selection-end="13044" vertical-scroll-proportion="0.0" vertical-offset="5134" max-vertical-offset="17170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="53" selection-start="3836" selection-end="3852" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="2499">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="704" column="4" selection-start="23603" selection-end="23603" vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12325">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="704" column="0" selection-start="23616" selection-end="23616" vertical-scroll-proportion="0.0" vertical-offset="11968" max-vertical-offset="12342">
+        <state vertical-scroll-proportion="0.0" vertical-offset="875" max-vertical-offset="2448">
+          <caret line="96" column="53" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pip/commands/search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="25" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2533">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pip/vcs/git.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="36" selection-start="6130" selection-end="6138" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="3400">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="2533">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pip/commands/list.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="73" selection-start="4804" selection-end="4804" vertical-scroll-proportion="0.0" vertical-offset="1615" max-vertical-offset="2873">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="2873">
+          <caret line="60" column="28" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/download.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3414" max-vertical-offset="11067">
+          <caret line="237" column="47" selection-start-line="237" selection-start-column="47" selection-end-line="237" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="9843">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pip/index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="679" column="54" selection-start="29454" selection-end="29454" vertical-scroll-proportion="0.0" vertical-offset="11277" max-vertical-offset="16898">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6525" max-vertical-offset="17272">
+          <caret line="404" column="57" selection-start-line="404" selection-start-column="43" selection-end-line="404" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pip/commands/show.py">
+    <entry file="file://$PROJECT_DIR$/pip/_vendor/_markerlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="65" selection-start="4436" selection-end="4436" vertical-scroll-proportion="0.0" vertical-offset="1545" max-vertical-offset="2584">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="760">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/_vendor/README.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="760">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/_vendor/_markerlib/markers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="511" max-vertical-offset="2125">
+          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/_vendor/vendor.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="760">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/wheel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7111111" vertical-offset="3190" max-vertical-offset="9248">
+          <caret line="236" column="29" selection-start-line="236" selection-start-column="29" selection-end-line="236" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pip/commands/install.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="49" selection-start="914" selection-end="914" vertical-scroll-proportion="0.30478087" vertical-offset="0" max-vertical-offset="5270">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3875" max-vertical-offset="5270">
+          <caret line="240" column="40" selection-start-line="240" selection-start-column="26" selection-end-line="240" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/req.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5" vertical-offset="30843" max-vertical-offset="32980">
+          <caret line="1819" column="31" selection-start-line="1819" selection-start-column="31" selection-end-line="1819" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/shutil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4614" max-vertical-offset="9452">
+          <caret line="263" column="4" selection-start-line="263" selection-start-column="4" selection-end-line="263" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pip/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5737977" vertical-offset="4669" max-vertical-offset="12393">
+          <caret line="295" column="49" selection-start-line="295" selection-start-column="49" selection-end-line="295" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

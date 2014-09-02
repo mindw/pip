@@ -84,7 +84,6 @@
       <shebang>/bin/sh</shebang>
     </inspection_tool>
     <inspection_tool class="Function overrides internal command" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="FunctionWithInconsistentReturnsJS" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="Global definition of local var" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="HtmlDeprecatedTag" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="HtmlExtraClosingTag" enabled="false" level="ERROR" enabled_by_default="false" />
