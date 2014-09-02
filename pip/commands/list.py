@@ -103,6 +103,14 @@ class ListCommand(Command):
 
     def run_outdated(self, options):
         for dist, version, typ in self.find_packages_latest_versions(options):
+            # We turn the version object into a str here because otherwise
+            # when we're debundled but setuptools isn't, Python will see
+            # packaging.version.Version and
+            # pkg_resources._vendor.packaging.version.Version as different
+            # types. This way we'll use a str as a common data interchange
+            # format. If we stop using the pkg_resources provided specifier
+            # and start using our own, we can drop the cast to str().
+            version = pkg_resources.parse_version(str(version))
             if version > dist.parsed_version:
                 logger.info(
                     '%s (Current: %s Latest: %s [%s])',

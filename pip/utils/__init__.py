@@ -22,7 +22,7 @@ from pip.locations import (
 )
 from pip._vendor import pkg_resources
 from pip._vendor.six.moves import input
-from pip._vendor.six import PY2
+from pip._vendor.six import PY2, text_type
 from pip._vendor.retrying import retry
 
 if PY2:
@@ -312,7 +312,12 @@ def renames(old, new):
     if head and tail and not os.path.exists(head):
         os.makedirs(head)
 
-    shutil.move(old, new)
+    # use litetal paths on windows to bypass the 260 path limitation
+    # bypass python Issue #13234 - os.listdir breaks with literal paths
+    if sys.platform == 'win32' and sys.version_info < (3, 4):
+        shutil.move(text_type('\\\\?\\') + old, text_type('\\\\?\\') + new)
+    else:
+        shutil.move(old, new)
 
     head, tail = os.path.split(old)
     if head and tail:
