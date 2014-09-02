@@ -292,7 +292,10 @@ def renames(old, new):
     if head and tail and not os.path.exists(head):
         os.makedirs(head)
 
-    shutil.move(old, new)
+    if sys.platform == 'win32':
+        shutil.move("\\\\?\\" + old, "\\\\?\\" + new)
+    else:
+        shutil.move(old, new)
 
     head, tail = os.path.split(old)
     if head and tail:
