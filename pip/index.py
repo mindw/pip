@@ -5,6 +5,7 @@ import os
 import re
 import mimetypes
 import posixpath
+import socket
 
 from pip.log import logger
 from pip.util import Inf, normalize_name, splitext, is_prerelease
@@ -706,6 +707,10 @@ class HTMLPage(object):
             )
         except requests.Timeout:
             cls._handle_fail(req, link, "timed out", url, cache=cache)
+
+        except socket.timeout:
+            cls._handle_fail(req, link, "timed out", url, cache=cache)
+
         except SSLError as exc:
             reason = ("There was a problem confirming the ssl certificate: "
                       "%s" % exc)
