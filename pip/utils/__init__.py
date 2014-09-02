@@ -289,7 +289,12 @@ def renames(old, new):
     if head and tail and not os.path.exists(head):
         os.makedirs(head)
 
-    shutil.move(old, new)
+    # use litetal paths on windows to bypass the 260 path limitation
+    # bypass python Issue #13234 - os.listdir breaks with literal paths
+    if sys.platform == 'win32':
+        shutil.move(u'\\\\?\\' + old, u'\\\\?\\' + new)
+    else:
+        shutil.move(old, new)
 
     head, tail = os.path.split(old)
     if head and tail:
