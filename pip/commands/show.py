@@ -11,6 +11,7 @@ import rfc822
 fields = ['name' ,'version' ,'platform' ,'summary' ,'description'
         ,'keywords' ,'home_page' ,'author' ,'author_email' ,'license']
 
+
 class PkgInfoParsed(object):
     def __init__(self, dist, missingMsg=None):
         if dist.has_metadata('PKG-INFO'):
@@ -24,12 +25,13 @@ class PkgInfoParsed(object):
                 prop = field.replace('_','-')
             else:
                 prop = field
-            value=messages.getheader(prop)
+            value = messages.getheader(prop)
             if missingMsg:
                 if not value or value == 'UNKNOWN':
                     value = missingMsg
             setattr(self, field, value)
-            
+
+
 class ShowCommand(Command):
     """Show information about one or more installed packages."""
     name = 'show'
@@ -63,7 +65,6 @@ class ShowCommand(Command):
 
         results = self.search_packages_info(query, options.index)
         self.print_results(results, options.files)
-
 
     def search_packages_info(self, query, index_url):
         """
@@ -100,13 +101,13 @@ class ShowCommand(Command):
                 package = {
                     'name': dist.project_name,
                     'version': dist.version,
-                    'pypi_version' : pypi_version,
+                    'pypi_version': pypi_version,
                     'location': dist.location,
                     'requires': requires,
                     'required_by': required_by,
                     'extras': extras,
-                    'metadata' : PkgInfoParsed(dist),
-                    'exports' : pkg_resources.get_entry_map(dist)
+                    'metadata': PkgInfoParsed(dist),
+                    'exports': pkg_resources.get_entry_map(dist)
                 }
                 filelist = os.path.join(
                            dist.location,
@@ -115,7 +116,6 @@ class ShowCommand(Command):
                 if os.path.isfile(filelist):
                     package['files'] = filelist
                 yield package
-
 
     def print_results(self, distributions, list_all_files):
         """
@@ -131,7 +131,7 @@ class ShowCommand(Command):
             logger.notify("Summary: %s" % dist['metadata'].summary)
             logger.notify("Requires: %s" % ', '.join(dist['requires']))
             for extra_name, deps in dist['extras'].items():
-                deps = ["%s%s" % (dep[0], "" if dep[1] else "(-)") for dep in deps]
+                deps=["%s%s" % (dep[0], "" if dep[1] else "(-)") for dep in deps]
                 logger.notify("Extra Require [%s]: %s", extra_name, ', '.join(deps))
             logger.notify("Required by(%d): %s" % (len(dist['required_by']), ', '.join(dist['required_by'])))
             for group, value in dist['exports'].items():

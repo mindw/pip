@@ -78,5 +78,5 @@ setup(name="pip",
       extras_require={
           'testing': tests_require,
       },
-      cmdclass = {'test': PyTest},
+      cmdclass={'test': PyTest},
 )
