@@ -58,7 +58,7 @@ import pip.cmdoptions
 cmdoptions = pip.cmdoptions
 
 # The version as used in the setup.py and the docs conf.py
-__version__ = "9.0.3"
+__version__ = "9.0.3+xy.12"
 
 
 logger = logging.getLogger(__name__)
