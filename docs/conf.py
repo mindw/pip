@@ -108,9 +108,10 @@ extlinks = {
 html_theme = 'default'
 if not on_rtd:
     try:
-        import sphinx_rtd_theme
-        html_theme = 'sphinx_rtd_theme'
-        html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+        import alabaster
+        html_theme = 'alabaster'
+        html_theme_path = [alabaster.get_path()]
+
     except ImportError:
         pass
 
@@ -178,7 +179,7 @@ html_show_sourcelink = False
 # html_file_suffix = ''
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'pipdocs'
+#htmlhelp_basename = 'pipdocs'
 
 
 # -- Options for LaTeX output -------------------------------------------------
