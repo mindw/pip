@@ -46,7 +46,7 @@ class ShowCommand(Command):
         query = args
 
         results = self.search_packages_info(query, options)
-        if not self.print_results(results, options.files):
+        if not print_results(results, options.files):
             return ERROR
         return SUCCESS
 
@@ -130,45 +130,48 @@ class ShowCommand(Command):
             package['files'] = file_list and sorted(file_list)
             yield package
 
-    def print_results(self, distributions, list_all_files):
-        """
-        Print the informations from installed distributions found.
-        """
-        results_printed = False
-        for dist in distributions:
-            results_printed = True
-            logger.info("---")
-            logger.info("Metadata-Version: %s" % dist.get('metadata-version'))
-            logger.info("Name: %s" % dist['name'])
-            logger.info("Version: %s" % dist['version'])
-            logger.info("PyPi Version: %s" % dist['pypi_version'])
-            logger.info("Summary: %s" % dist.get('summary'))
-            logger.info("Home-page: %s" % dist.get('home-page'))
-            logger.info("Author: %s" % dist.get('author'))
-            logger.info("Author-email: %s" % dist.get('author-email'))
-            logger.info("License: %s" % dist.get('license'))
-            logger.info("Location: %s" % dist['location'])
-            logger.info("Requires:")
-            for line in sorted(dist['requires']):
-                    logger.info("  %s" % line)
-            for extra_name, deps in dist['extras'].items():
-                deps = ["%s%s" % (dep[0], "" if dep[1] else "(-)") for dep in deps]
-                logger.info("Extra Require [%s]: %s", extra_name, ', '.join(deps))
-            logger.info("Required by(%d):" % len(dist['required_by']))
-            for line in sorted(dist['required_by']):
+
+def print_results(distributions, list_all_files):
+    """
+    Print the informations from installed distributions found.
+    """
+    results_printed = False
+    for dist in distributions:
+        results_printed = True
+        logger.info("---")
+        logger.info("Metadata-Version: %s" % dist.get('metadata-version'))
+        logger.info("Name: %s" % dist['name'])
+        logger.info("Version: %s" % dist['version'])
+        logger.info("PyPi Version: %s" % dist['pypi_version'])
+        logger.info("Summary: %s" % dist.get('summary'))
+        logger.info("Home-page: %s" % dist.get('home-page'))
+        logger.info("Author: %s" % dist.get('author'))
+        logger.info("Author-email: %s" % dist.get('author-email'))
+        logger.info("License: %s" % dist.get('license'))
+        logger.info("Location: %s" % dist['location'])
+        logger.info("Requires:")
+        for line in sorted(dist['requires']):
+                logger.info("  %s" % line)
+        for extra_name, deps in dist['extras'].items():
+            deps = ["%s%s" % (dep[0], "" if dep[1] else "(-)") for dep in deps]
+            logger.info("Extra Require [%s]:", extra_name)
+            for line in sorted(deps):
+                logger.info("  %s" % line.strip())
+        logger.info("Required by(%d):" % len(dist['required_by']))
+        for line in sorted(dist['required_by']):
+            logger.info("  %s" % line.strip())
+
+        if list_all_files:
+            logger.info("Files:")
+            if dist['files'] is not None:
+                for line in dist['files']:
+                    logger.info("  %s" % line.strip())
+            else:
+                logger.info("Cannot locate installed-files.txt")
+        if 'entry_points' in dist:
+            logger.info("Entry-points:")
+            for line in dist['entry_points']:
                 logger.info("  %s" % line.strip())
 
-            if list_all_files:
-                logger.info("Files:")
-                if dist['files'] is not None:
-                    for line in dist['files']:
-                        logger.info("  %s" % line.strip())
-                else:
-                    logger.info("Cannot locate installed-files.txt")
-            if 'entry_points' in dist:
-                logger.info("Entry-points:")
-                for line in dist['entry_points']:
-                    logger.info("  %s" % line.strip())
-
-        return results_printed
+    return results_printed
 
