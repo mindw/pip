@@ -110,12 +110,12 @@ class ShowCommand(Command):
                     paths = dist.get_metadata_lines('installed-files.txt')
                     paths = [os.path.join(dist.egg_info, p) for p in paths]
                     file_list = [os.path.relpath(p, dist.location) for p in paths]
-                if dist.has_metadata('entry_points.txt'):
-                    entry_points = dist.get_metadata_lines('entry_points.txt')
-                    package['entry_points'] = entry_points
-
                 if dist.has_metadata('PKG-INFO'):
                     metadata = dist.get_metadata('PKG-INFO')
+
+            if dist.has_metadata('entry_points.txt'):
+                entry_points = dist.get_metadata_lines('entry_points.txt')
+                package['entry_points'] = entry_points
 
             # @todo: Should pkg_resources.Distribution have a
             # `get_pkg_info` method?
