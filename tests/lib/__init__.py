@@ -252,9 +252,9 @@ class PipTestEnvironment(scripttest.TestFileEnvironment):
         if hasattr(sys, "pypy_version_info"):
             lib = os.path.join(venv, 'lib-python', pyversion)
         self.venv_path = venv
-        self.lib_path = lib
-        self.include_path = include
-        self.bin_path = bin
+        self.lib_path = Path(lib)
+        self.include_path = Path(include)
+        self.bin_path = Path(bin)
 
         if hasattr(sys, "pypy_version_info"):
             self.site_packages_path = self.venv_path.join("site-packages")
