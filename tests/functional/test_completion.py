@@ -1,4 +1,9 @@
 import os
+import pytest
+import sys
+
+pytestmark = pytest.mark.skipif(
+    sys.platform == 'win32', reason="cannot be run on Windows")
 
 
 def test_completion_for_bash(script):
