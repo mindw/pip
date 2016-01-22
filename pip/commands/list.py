@@ -11,6 +11,7 @@ from pip.utils import (
 from pip.utils.deprecation import RemovedInPip10Warning
 from pip.cmdoptions import make_option_group, index_group
 from pip._vendor import pkg_resources
+from pip.utils.ui import ProgressBar
 
 logger = logging.getLogger(__name__)
 
@@ -164,7 +165,8 @@ class ListCommand(Command):
                 user_only=options.user,
                 editables_only=options.editable,
             )
-            for dist in installed_packages:
+            progress = ProgressBar(max=len(installed_packages)).iter
+            for dist in progress(iter(installed_packages)):
                 typ = 'unknown'
                 all_candidates = finder.find_all_candidates(dist.key)
                 if not options.pre:
