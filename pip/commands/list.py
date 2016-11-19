@@ -18,6 +18,7 @@ from pip.utils import (
 from pip.utils.deprecation import RemovedInPip10Warning
 from pip.cmdoptions import make_option_group, index_group
 from pip.utils.ui import ProgressBar
+from pip._vendor import pkg_resources
 
 logger = logging.getLogger(__name__)
 
@@ -218,7 +219,7 @@ class ListCommand(Command):
                 else:
                     typ = 'sdist'
                 # This is dirty but makes the rest of the code much cleaner
-                dist.latest_version = remote_version
+                dist.latest_version = pkg_resources.parse_version(str(remote_version))
                 dist.latest_filetype = typ
                 yield dist
 
