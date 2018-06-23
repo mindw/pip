@@ -192,6 +192,13 @@ class WindowsMixin(object):
             self.file.flush = lambda: self.file.wrapped.flush()
 
 
+class ProgressBar(WindowsMixin, InterruptibleMixin,
+                  DownloadProgressMixin, _BaseBar):
+
+    file = sys.stdout
+    message = "%(percent)d%%"
+
+
 class BaseDownloadProgressBar(WindowsMixin, InterruptibleMixin,
                               DownloadProgressMixin):
 
