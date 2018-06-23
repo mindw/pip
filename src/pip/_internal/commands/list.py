@@ -16,6 +16,7 @@ from pip._internal.utils.misc import (
     dist_is_editable, get_installed_distributions,
 )
 from pip._internal.utils.packaging import get_installer
+from pip._internal.utils.ui import ProgressBar
 
 logger = logging.getLogger(__name__)
 
@@ -186,7 +187,8 @@ class ListCommand(Command):
             finder = self._build_package_finder(options, index_urls, session)
             finder.add_dependency_links(dependency_links)
 
-            for dist in packages:
+            progress = ProgressBar(max=len(packages)).iter
+            for dist in progress(iter(packages)):
                 typ = 'unknown'
                 all_candidates = finder.find_all_candidates(dist.key)
                 if not options.pre:

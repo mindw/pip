@@ -36,3 +36,5 @@ coverage.xml
 
 # Scratch Pad for experiments
 .scratch/
+
+venv/
