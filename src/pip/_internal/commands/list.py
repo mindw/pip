@@ -178,6 +178,9 @@ class ListCommand(IndexGroupCommand):
         dep_keys = set()
         for dist in packages:
             dep_keys.update(requirement.key for requirement in dist.requires())
+            for e in dist.extras:
+                dep_keys.update(
+                    requirement.key for requirement in dist.requires([e]))
         return {pkg for pkg in packages if pkg.key not in dep_keys}
 
     def iter_packages_latest_infos(self, packages, options):
