@@ -162,6 +162,11 @@ class DownloadProgressMixin(object):
             self.next(len(x))
         self.finish()
 
+    def iter_step(self, it, n=1):
+        for x in it:
+            yield x
+            self.next(n)
+        self.finish()
 
 class WindowsMixin(object):
 

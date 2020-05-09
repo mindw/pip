@@ -187,7 +187,8 @@ class ListCommand(IndexGroupCommand):
         with self._build_session(options) as session:
             finder = self._build_package_finder(options, session)
 
-            progress = ProgressBar(max=len(packages)).iter
+            # patch the damn thing
+            progress = ProgressBar(max=len(packages)).iter_step
             for dist in progress(iter(packages)):
                 typ = 'unknown'
                 all_candidates = finder.find_all_candidates(dist.key)
